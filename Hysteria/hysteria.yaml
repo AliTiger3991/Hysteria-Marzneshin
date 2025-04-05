@@ -1,0 +1,20 @@
+listen: :8080
+
+tls:
+  cert: /var/lib/marznode/certs/cert.crt
+  key: /var/lib/marznode/certs/private.key
+
+auth:
+  type: password
+  password: "YourStrongPassword"
+
+masquerade:
+  type: proxy
+  proxy:
+    url: https://www.apple.com/
+    rewriteHost: true
+
+obfs:
+  type: salamander
+  salamander:
+    password: "YourStrongPassword"
